@@ -15,7 +15,7 @@ permissions:
 env:
   DOTNET_VERSION: '8.x'
   DOTNET_ROOT: .
-  APP_NAME: ''
+  APP_NAME: 'ProtectingYourSecretsWeb-20241026icc'
   SLOT_NAME: 'production'
 
 jobs:
