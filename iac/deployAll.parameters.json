@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "groupName": {
-            "value": "RG-ProtectingYourSecrets"
+            "value": "ProtectingYourApplicationSecrets_IACC"
         },
         "location": {
             "value": "centralus"
         },
         "uniqueIdentifier": {
-            "value": "20241231acw"
+            "value": "20241026icc"
         },
         "logAnalyticsWorkspaceName": {
             "value": "LA-ProtectingYourSecrets"
@@ -33,7 +33,7 @@
             "value": "KV-ProtSec"
         },
         "keyVaultAdminObjectId": {
-            "value": "your-object-id-here"
+            "value": "c8611ffc-9f31-46ef-a71c-04328a0be704"
         },
         "appConfigName": {
             "value": "AC-ProtectingYourSecrets"
@@ -51,7 +51,7 @@
             "value": "Azure#54321!"
         },
         "clientIPAddress": {
-            "value": "your-ip-address-here"
+            "value": "68.235.46.22"
         }
     }
 }
