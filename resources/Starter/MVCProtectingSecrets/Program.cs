@@ -3,6 +3,7 @@ using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MVCProtectingSecrets.Data;
+using MVCProtectingSecrets.Initializers;
 
 namespace MVCProtectingSecrets
 {
@@ -50,7 +51,7 @@ namespace MVCProtectingSecrets
             builder.Services.AddApplicationInsightsTelemetry();
 
             //TODO: enable the following code to sanitize logs
-            //builder.Services.AddSingleton<ITelemetryInitializer, LogSanitizerInsightsInitializer>();
+            builder.Services.AddSingleton<ITelemetryInitializer, LogSanitizerInsightsInitializer>();
 
             var app = builder.Build();
 

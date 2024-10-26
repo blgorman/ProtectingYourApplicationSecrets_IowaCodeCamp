@@ -1,10 +1,11 @@
 ﻿using Microsoft.ApplicationInsights.Channel;
 using Microsoft.ApplicationInsights.DataContracts;
+using Microsoft.ApplicationInsights.Extensibility;
 using System.Text.RegularExpressions;
 
 namespace MVCProtectingSecrets.Initializers
 {
-    public class LogSanitizerInsightsInitializer
+    public class LogSanitizerInsightsInitializer : ITelemetryInitializer
     {
         public void Initialize(ITelemetry telemetry)
         {
@@ -22,6 +23,8 @@ namespace MVCProtectingSecrets.Initializers
         {
             // Sanitize email addresses
             msg = SanitizeEmail(msg);
+            msg = SanitizeConnectionStringDetails(msg);
+            msg = SanitizeSASToken(msg);
 
             //return sanitized string
             return msg;
